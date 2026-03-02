@@ -102,7 +102,8 @@ const Schema = (() => {
             name: 'Structures (Shared)',
             faction: 'shared',
             units: [
-                'Headquarters', 'Refinery', 'Barracks', 'Light Factory',
+                'Sol Headquarters', 'Cent Headquarters',
+                'Refinery', 'Barracks', 'Light Factory',
                 'Air Factory', 'Heavy Factory', 'Ultra Heavy Factory',
                 'Turret', 'Heavy Turret', 'Anti-Air Rocket Turret',
             ]

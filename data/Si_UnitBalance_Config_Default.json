@@ -527,7 +527,15 @@
             "visible_event_radius_mult": 1
         },
         "_comment_struct": "========== SOL/CENTAURI — Structures ==========",
-        "Headquarters": {
+        "Sol Headquarters": {
+            "_base": "HP:100000 Cost:7000 Build:120.0s T5",
+            "health_mult": 1,
+            "cost_mult": 1,
+            "build_time_mult": 1,
+            "min_tier": 5,
+            "build_radius": 1500
+        },
+        "Cent Headquarters": {
             "_base": "HP:100000 Cost:7000 Build:120.0s T5",
             "health_mult": 1,
             "cost_mult": 1,
