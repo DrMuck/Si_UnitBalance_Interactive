@@ -64,6 +64,10 @@ const State = (() => {
         return defaultConfig.units[unitName] || null;
     }
 
+    function getDefaultConfig() {
+        return deepClone(defaultConfig);
+    }
+
     // ── Unit params ──
 
     function getUnitParam(unitName, paramKey) {
@@ -335,6 +339,7 @@ const State = (() => {
         loadDefault,
         importConfig,
         getDefaultUnitData,
+        getDefaultConfig,
         getUnitParam,
         setUnitParam,
         resetUnitParam,

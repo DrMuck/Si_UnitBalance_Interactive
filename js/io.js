@@ -4,6 +4,7 @@
 const IO = (() => {
     function init() {
         document.getElementById('btn-export').addEventListener('click', exportDownload);
+        document.getElementById('btn-export-default').addEventListener('click', exportDefaultDownload);
         document.getElementById('btn-clipboard').addEventListener('click', exportClipboard);
         document.getElementById('btn-import').addEventListener('click', () => {
             document.getElementById('file-import').click();
@@ -23,6 +24,19 @@ const IO = (() => {
         a.click();
         URL.revokeObjectURL(url);
         showToast('Config downloaded');
+    }
+
+    function exportDefaultDownload() {
+        const json = State.getDefaultConfig();
+        const text = JSON.stringify(json, null, 4);
+        const blob = new Blob([text], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Si_UnitBalance_Config_Default.json';
+        a.click();
+        URL.revokeObjectURL(url);
+        showToast('Default config downloaded');
     }
 
     function exportClipboard() {

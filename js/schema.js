@@ -19,7 +19,11 @@ const Schema = (() => {
         build_radius:               { label: 'Build Radius',      group: 'Placement',        type: 'float', min: 50, max: 2000, step: 10, tooltip: 'Build radius in meters' },
 
         // Single weapon (turrets / alien defense)
-        damage_mult:                { label: 'Damage',             group: 'Weapon',           type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales weapon damage' },
+        impact_damage_mult:         { label: 'Impact Damage',      group: 'Weapon',           type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales impact (direct hit) damage' },
+        splash_damage_mult:         { label: 'Splash Damage',      group: 'Weapon',           type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales splash (AoE) damage' },
+        splash_radius_max_mult:     { label: 'Splash Radius Max',  group: 'Weapon',           type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales maximum splash radius' },
+        splash_radius_min_mult:     { label: 'Splash Radius Min',  group: 'Weapon',           type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales minimum splash radius' },
+        splash_radius_pow_mult:     { label: 'Splash Radius Pow',  group: 'Weapon',           type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales splash damage falloff curve power' },
         proj_speed_mult:            { label: 'Proj Speed',         group: 'Weapon',           type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales projectile speed' },
         proj_lifetime_mult:         { label: 'Proj Lifetime',      group: 'Weapon',           type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales projectile lifetime (affects range)' },
         range_mult:                 { label: 'Range',              group: 'Weapon',           type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales weapon range + detection range' },
@@ -29,7 +33,14 @@ const Schema = (() => {
         reload_time_mult:           { label: 'Reload Time',        group: 'Weapon',           type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales reload time' },
 
         // Primary weapon
-        pri_damage_mult:            { label: 'Damage',             group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales primary weapon damage' },
+        pri_damage_mult:            { label: 'Damage',             group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales primary weapon damage (melee)' },
+        pri_impact_damage_mult:     { label: 'Impact Damage',      group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales primary impact damage' },
+        pri_splash_damage_mult:     { label: 'Splash Damage',      group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales primary splash damage' },
+        pri_penetrating_damage_mult:{ label: 'Penetrating Damage', group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales primary armor-penetrating damage' },
+        pri_ricochet_damage_mult:   { label: 'Ricochet Damage',    group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales primary ricochet damage' },
+        pri_splash_radius_max_mult: { label: 'Splash Radius Max',  group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales primary max splash radius' },
+        pri_splash_radius_min_mult: { label: 'Splash Radius Min',  group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales primary min splash radius' },
+        pri_splash_radius_pow_mult: { label: 'Splash Radius Pow',  group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales primary splash falloff curve' },
         pri_proj_speed_mult:        { label: 'Proj Speed',         group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales primary projectile speed' },
         pri_proj_lifetime_mult:     { label: 'Proj Lifetime',      group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales primary projectile lifetime' },
         pri_accuracy_mult:          { label: 'Accuracy',           group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales primary weapon spread' },
@@ -38,7 +49,14 @@ const Schema = (() => {
         pri_reload_time_mult:       { label: 'Reload Time',        group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales primary reload time' },
 
         // Secondary weapon
-        sec_damage_mult:            { label: 'Damage',             group: 'Secondary Weapon', type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales secondary weapon damage' },
+        sec_damage_mult:            { label: 'Damage',             group: 'Secondary Weapon', type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales secondary weapon damage (melee)' },
+        sec_impact_damage_mult:     { label: 'Impact Damage',      group: 'Secondary Weapon', type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales secondary impact damage' },
+        sec_splash_damage_mult:     { label: 'Splash Damage',      group: 'Secondary Weapon', type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales secondary splash damage' },
+        sec_penetrating_damage_mult:{ label: 'Penetrating Damage', group: 'Secondary Weapon', type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales secondary armor-penetrating damage' },
+        sec_ricochet_damage_mult:   { label: 'Ricochet Damage',    group: 'Secondary Weapon', type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales secondary ricochet damage' },
+        sec_splash_radius_max_mult: { label: 'Splash Radius Max',  group: 'Secondary Weapon', type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales secondary max splash radius' },
+        sec_splash_radius_min_mult: { label: 'Splash Radius Min',  group: 'Secondary Weapon', type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales secondary min splash radius' },
+        sec_splash_radius_pow_mult: { label: 'Splash Radius Pow',  group: 'Secondary Weapon', type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales secondary splash falloff curve' },
         sec_proj_speed_mult:        { label: 'Proj Speed',         group: 'Secondary Weapon', type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales secondary projectile speed' },
         sec_proj_lifetime_mult:     { label: 'Proj Lifetime',      group: 'Secondary Weapon', type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales secondary projectile lifetime' },
         sec_accuracy_mult:          { label: 'Accuracy',           group: 'Secondary Weapon', type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales secondary weapon spread' },
@@ -102,8 +120,7 @@ const Schema = (() => {
             name: 'Structures (Shared)',
             faction: 'shared',
             units: [
-                'Sol Headquarters', 'Cent Headquarters',
-                'Refinery', 'Barracks', 'Light Factory',
+                'Headquarters', 'Refinery', 'Barracks', 'Light Factory',
                 'Air Factory', 'Heavy Factory', 'Ultra Heavy Factory',
                 'Turret', 'Heavy Turret', 'Anti-Air Rocket Turret',
             ]
@@ -133,7 +150,7 @@ const Schema = (() => {
             ]
         },
         {
-            name: 'Hover Bike',
+            name: 'Shared Vehicles',
             faction: 'shared',
             units: ['Hover Bike']
         },
