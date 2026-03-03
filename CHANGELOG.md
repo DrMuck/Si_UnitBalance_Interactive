@@ -1,5 +1,12 @@
 # Si_UnitBalance Interactive - Changelog
 
+## 2026-03-04 - m_bSplash Boolean Fix & Default Config Download
+
+- **Fixed**: Removed splash damage/radius params from 12 projectiles where `m_bSplash = False` (splash disabled in game engine)
+  - Affected units: Squad Transport, Light Quad, Heavy Quad, and others (60 params removed)
+- **Added**: "Download Default Config" button to export full default config JSON
+- **Synced**: Server config now has Sol Harvester / Cent Harvester split natively (78 units total)
+
 ## 2026-03-03 - Projectile Damage Sub-Categories & Splash Params
 
 - **Added**: Per-unit projectile damage sub-category multipliers:
