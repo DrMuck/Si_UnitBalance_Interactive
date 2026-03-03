@@ -1,5 +1,13 @@
 # Si_UnitBalance Interactive - Changelog
 
+## 2026-03-04 - Vehicle Projectile Audit & Fake Secondary Removal
+
+- **Fixed**: Corrected all 31 vehicle_projectiles mappings to match actual dump data (`vt_proj`/`vt2_proj` fields)
+- **Removed**: 13 fake secondary weapons from units with no `vt2_proj` in dump:
+  AA Truck, Bomber, Crimson Tank, Dropship, Fighter, Flak Car, Freighter, Interceptor, Light Striker, Platoon Hauler, Siege Tank, Squad Transport, Strike Tank
+- **Fixed**: Wrong projectile assignments for Assault Car, Light/Heavy Quad, Light/Heavy Raider, Dreadnought, Gunship, Fighter, Freighter, Shuttle, Interceptor
+- Config reduced from 1378 to 1242 params (136 removed)
+
 ## 2026-03-04 - m_bSplash Boolean Fix & Default Config Download
 
 - **Fixed**: Removed splash damage/radius params from 12 projectiles where `m_bSplash = False` (splash disabled in game engine)
