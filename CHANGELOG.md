@@ -1,5 +1,10 @@
 # Si_UnitBalance Interactive - Changelog
 
+## 2026-03-04 - Independent Sol/Cent Headquarters
+
+- **Split**: "Headquarters" into "Sol Headquarters" and "Cent Headquarters" for independent balancing
+- Same pattern as Sol/Cent Harvester split
+
 ## 2026-03-04 - m_bPenetrating Fix & Multi-Turret Corrections
 
 - **Fixed**: Removed penetrating damage params from 20 projectiles where `m_bPenetrating = False`
