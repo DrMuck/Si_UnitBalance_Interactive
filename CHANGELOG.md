@@ -1,5 +1,11 @@
 # Si_UnitBalance Interactive - Changelog
 
+## 2026-03-04 - Bomber/Freighter Pri/Sec Weapon Swap
+
+- **Fixed**: Bomber pri=Shell_StealthBomber (cannon), sec=Bomb_DropBomb (bombs) — cannon is now primary
+- **Fixed**: Freighter pri=Shell_Dreadnought (cannon), sec=Bomb_ContainerBomb (bomb) — cannon is now primary
+- Matches `_vtPriIndex` fix in mother project
+
 ## 2026-03-04 - Independent Sol/Cent Headquarters
 
 - **Split**: "Headquarters" into "Sol Headquarters" and "Cent Headquarters" for independent balancing
