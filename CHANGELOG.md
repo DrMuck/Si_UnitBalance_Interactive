@@ -1,5 +1,17 @@
 # Si_UnitBalance Interactive - Changelog
 
+## 2026-03-04 - m_bPenetrating Fix & Multi-Turret Corrections
+
+- **Fixed**: Removed penetrating damage params from 20 projectiles where `m_bPenetrating = False`
+  - Only 7 projectiles actually have penetrating enabled (Shell_HoverTank, Shell_HeavyArmoredCar, etc.)
+- **Fixed**: Multi-turret aircraft corrections from new dump data:
+  - Bomber: pri=Shell_StealthBomber (cannon), was missing weapon data
+  - Freighter: pri=Shell_Dreadnought (cannon), was missing weapon data
+  - Gunship/Shuttle/Platoon Hauler: correct turret slot assignments via `turret_stats_prefix`
+  - Fighter: pri=HMG_StealthFighter (gun), sec=Bomb_DiveBomb (bomb)
+  - Interceptor: pri=Shell_Interceptor (gun), sec=Bomb_DropTank (bomb)
+- Config: 1242 to 1280 params (penetrating removed, but new aircraft weapon keys added)
+
 ## 2026-03-04 - Vehicle Projectile Audit & Fake Secondary Removal
 
 - **Fixed**: Corrected all 31 vehicle_projectiles mappings to match actual dump data (`vt_proj`/`vt2_proj` fields)
