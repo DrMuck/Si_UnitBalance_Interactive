@@ -1,5 +1,12 @@
 # Si_UnitBalance Interactive - Changelog
 
+## 2026-03-06 - Structure FOW Vision & Turret Target Range
+
+- **Added**: `fow_distance` for all buildings — adjustable Fog of War reveal range
+- **Added**: `target_distance` for armed structures (turrets) — adjustable AI targeting range
+- Synced from mother project Si_UnitBalanceUI
+- Config: 1280 to 1316 params (+36: 20 fow_distance for structures + 5 target_distance for turrets + 11 _base_sense annotations)
+
 ## 2026-03-04 - Bomber/Freighter Pri/Sec Weapon Swap
 
 - **Fixed**: Bomber pri=Shell_StealthBomber (cannon), sec=Bomb_DropBomb (bombs) — cannon is now primary

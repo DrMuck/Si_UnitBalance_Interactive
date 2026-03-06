@@ -31,15 +31,15 @@
             "pri_impact_damage_mult": 1.0,
             "pri_proj_speed_mult": 1.0,
             "pri_proj_lifetime_mult": 1.0,
-            "_base_speed": "Walk:2 Run:4 Sprint:7 Jump:4.25",
-            "walk_speed_mult": 1.0,
-            "run_speed_mult": 1.0,
-            "sprint_speed_mult": 1.0,
+            "_base_speed": "Walk:2.5 Run:5.5 Sprint:7.5 Jump:5",
             "jump_speed_mult": 1.0,
             "_base_sense": "FOW:200 Target:400",
             "target_distance": 400,
             "fow_distance": 200,
-            "visible_event_radius_mult": 1.0
+            "visible_event_radius_mult": 1.0,
+            "walk_speed_mult": 1.0,
+            "run_speed_mult": 1.0,
+            "sprint_speed_mult": 1.0
         },
         "Rifleman": {
             "_base": "HP:150 Cost:40 Build:10.0s T0",
@@ -51,15 +51,15 @@
             "pri_impact_damage_mult": 1.0,
             "pri_proj_speed_mult": 1.0,
             "pri_proj_lifetime_mult": 1.0,
-            "_base_speed": "Walk:2 Run:4 Sprint:7 Jump:4.25",
-            "walk_speed_mult": 1.0,
-            "run_speed_mult": 1.0,
-            "sprint_speed_mult": 1.0,
+            "_base_speed": "Walk:2.5 Run:5.0 Sprint:7.0 Jump:5",
             "jump_speed_mult": 1.0,
             "_base_sense": "FOW:200 Target:400",
             "target_distance": 400,
             "fow_distance": 200,
-            "visible_event_radius_mult": 1.0
+            "visible_event_radius_mult": 1.0,
+            "walk_speed_mult": 1.0,
+            "run_speed_mult": 1.0,
+            "sprint_speed_mult": 1.0
         },
         "Sniper": {
             "_base": "HP:100 Cost:120 Build:10.0s T2",
@@ -71,15 +71,15 @@
             "pri_impact_damage_mult": 1.0,
             "pri_proj_speed_mult": 1.0,
             "pri_proj_lifetime_mult": 1.0,
-            "_base_speed": "Walk:2 Run:4 Sprint:7 Jump:4.25",
-            "walk_speed_mult": 1.0,
-            "run_speed_mult": 1.0,
-            "sprint_speed_mult": 1.0,
+            "_base_speed": "Walk:2.5 Run:5.0 Sprint:6.5 Jump:5",
             "jump_speed_mult": 1.0,
             "_base_sense": "FOW:200 Target:400",
             "target_distance": 400,
             "fow_distance": 200,
-            "visible_event_radius_mult": 1.0
+            "visible_event_radius_mult": 1.0,
+            "walk_speed_mult": 1.0,
+            "run_speed_mult": 1.0,
+            "sprint_speed_mult": 1.0
         },
         "Heavy": {
             "_base": "HP:200 Cost:180 Build:15.0s T3",
@@ -91,15 +91,15 @@
             "pri_impact_damage_mult": 1.0,
             "pri_proj_speed_mult": 1.0,
             "pri_proj_lifetime_mult": 1.0,
-            "_base_speed": "Walk:2 Run:4 Sprint:7 Jump:4.25",
-            "walk_speed_mult": 1.0,
-            "run_speed_mult": 1.0,
-            "sprint_speed_mult": 1.0,
+            "_base_speed": "Walk:2.5 Run:4.0 Sprint:6.0 Jump:5",
             "jump_speed_mult": 1.0,
             "_base_sense": "FOW:200 Target:400",
             "target_distance": 400,
             "fow_distance": 200,
-            "visible_event_radius_mult": 1.0
+            "visible_event_radius_mult": 1.0,
+            "walk_speed_mult": 1.0,
+            "run_speed_mult": 1.0,
+            "sprint_speed_mult": 1.0
         },
         "Commando": {
             "_base": "HP:200 Cost:360 Build:20.0s T4",
@@ -111,15 +111,15 @@
             "pri_impact_damage_mult": 1.0,
             "pri_proj_speed_mult": 1.0,
             "pri_proj_lifetime_mult": 1.0,
-            "_base_speed": "Walk:2 Run:4 Sprint:7 Jump:4.25",
-            "walk_speed_mult": 1.0,
-            "run_speed_mult": 1.0,
-            "sprint_speed_mult": 1.0,
+            "_base_speed": "Walk:2.5 Run:5.0 Sprint:7.0 Jump:5",
             "jump_speed_mult": 1.0,
             "_base_sense": "FOW:200 Target:400",
             "target_distance": 400,
             "fow_distance": 200,
-            "visible_event_radius_mult": 1.0
+            "visible_event_radius_mult": 1.0,
+            "walk_speed_mult": 1.0,
+            "run_speed_mult": 1.0,
+            "sprint_speed_mult": 1.0
         },
         "_comment_sol_lf": "========== SOL \u2014 Light Factory ==========",
         "Light Quad": {
@@ -583,20 +583,24 @@
         },
         "_comment_struct": "========== SOL/CENTAURI \u2014 Structures ==========",
         "Sol Headquarters": {
-            "_base": "HP:100000 Cost:7000 Build:120.0s T5",
+            "_base": "Sol | HP:100000 Cost:7000 Build:120.0s T5",
             "health_mult": 1.0,
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": 5,
-            "build_radius": 1500
+            "build_radius": 1500,
+            "_base_sense": "FOW:600 Target:300",
+            "fow_distance": 600
         },
         "Cent Headquarters": {
-            "_base": "HP:100000 Cost:7000 Build:120.0s T5",
+            "_base": "Cent | HP:100000 Cost:7000 Build:120.0s T5",
             "health_mult": 1.0,
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": 5,
-            "build_radius": 1500
+            "build_radius": 1500,
+            "_base_sense": "FOW:600 Target:300",
+            "fow_distance": 600
         },
         "Refinery": {
             "_base": "HP:80000 Cost:3000 Build:30.0s T0",
@@ -604,7 +608,9 @@
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": -1,
-            "build_radius": 600
+            "build_radius": 600,
+            "_base_sense": "FOW:200 Target:300",
+            "fow_distance": 200
         },
         "Barracks": {
             "_base": "HP:40000 Cost:1000 Build:30.0s T0",
@@ -612,7 +618,9 @@
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": -1,
-            "build_radius": 600
+            "build_radius": 600,
+            "_base_sense": "FOW:200 Target:300",
+            "fow_distance": 200
         },
         "Light Factory": {
             "_base": "HP:40000 Cost:3000 Build:30.0s T1",
@@ -620,7 +628,9 @@
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": 1,
-            "build_radius": 600
+            "build_radius": 600,
+            "_base_sense": "FOW:200 Target:300",
+            "fow_distance": 200
         },
         "Air Factory": {
             "_base": "HP:80000 Cost:5000 Build:90.0s T6",
@@ -628,7 +638,9 @@
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": 6,
-            "build_radius": 600
+            "build_radius": 600,
+            "_base_sense": "FOW:200 Target:300",
+            "fow_distance": 200
         },
         "Heavy Factory": {
             "_base": "HP:80000 Cost:4500 Build:60.0s T4",
@@ -636,7 +648,9 @@
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": 4,
-            "build_radius": 600
+            "build_radius": 600,
+            "_base_sense": "FOW:200 Target:300",
+            "fow_distance": 200
         },
         "Ultra Heavy Factory": {
             "_base": "HP:150000 Cost:6000 Build:120.0s T7",
@@ -644,7 +658,9 @@
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": 7,
-            "build_radius": 600
+            "build_radius": 600,
+            "_base_sense": "FOW:200 Target:300",
+            "fow_distance": 200
         },
         "Turret": {
             "_base": "HP:5000 Cost:750 Build:35.0s T2",
@@ -661,7 +677,10 @@
             "accuracy_mult": 1.0,
             "magazine_mult": 1.0,
             "fire_rate_mult": 1.0,
-            "reload_time_mult": 1.0
+            "reload_time_mult": 1.0,
+            "_base_sense": "FOW:300 Target:400",
+            "fow_distance": 300,
+            "target_distance": 400
         },
         "Heavy Turret": {
             "_base": "HP:7000 Cost:1500 Build:35.0s T4",
@@ -678,7 +697,10 @@
             "accuracy_mult": 1.0,
             "magazine_mult": 1.0,
             "fire_rate_mult": 1.0,
-            "reload_time_mult": 1.0
+            "reload_time_mult": 1.0,
+            "_base_sense": "FOW:300 Target:600",
+            "fow_distance": 300,
+            "target_distance": 600
         },
         "Anti-Air Rocket Turret": {
             "_base": "HP:5000 Cost:2000 Build:35.0s T6",
@@ -699,7 +721,10 @@
             "accuracy_mult": 1.0,
             "magazine_mult": 1.0,
             "fire_rate_mult": 1.0,
-            "reload_time_mult": 1.0
+            "reload_time_mult": 1.0,
+            "_base_sense": "FOW:300 Target:600",
+            "fow_distance": 300,
+            "target_distance": 600
         },
         "_comment_cen_barracks": "========== CENTAURI \u2014 Barracks ==========",
         "Militia": {
@@ -712,15 +737,15 @@
             "pri_impact_damage_mult": 1.0,
             "pri_proj_speed_mult": 1.0,
             "pri_proj_lifetime_mult": 1.0,
-            "_base_speed": "Walk:2 Run:4 Sprint:7 Jump:4.25",
-            "walk_speed_mult": 1.0,
-            "run_speed_mult": 1.0,
-            "sprint_speed_mult": 1.0,
+            "_base_speed": "Walk:2.5 Run:5.5 Sprint:7.5 Jump:5",
             "jump_speed_mult": 1.0,
             "_base_sense": "FOW:200 Target:400",
             "target_distance": 400,
             "fow_distance": 200,
-            "visible_event_radius_mult": 1.0
+            "visible_event_radius_mult": 1.0,
+            "walk_speed_mult": 1.0,
+            "run_speed_mult": 1.0,
+            "sprint_speed_mult": 1.0
         },
         "Trooper": {
             "_base": "HP:150 Cost:40 Build:10.0s T0",
@@ -732,15 +757,15 @@
             "pri_impact_damage_mult": 1.0,
             "pri_proj_speed_mult": 1.0,
             "pri_proj_lifetime_mult": 1.0,
-            "_base_speed": "Walk:2 Run:4 Sprint:7 Jump:4.25",
-            "walk_speed_mult": 1.0,
-            "run_speed_mult": 1.0,
-            "sprint_speed_mult": 1.0,
+            "_base_speed": "Walk:2.5 Run:5.0 Sprint:7.0 Jump:5",
             "jump_speed_mult": 1.0,
             "_base_sense": "FOW:200 Target:400",
             "target_distance": 400,
             "fow_distance": 200,
-            "visible_event_radius_mult": 1.0
+            "visible_event_radius_mult": 1.0,
+            "walk_speed_mult": 1.0,
+            "run_speed_mult": 1.0,
+            "sprint_speed_mult": 1.0
         },
         "Marksman": {
             "_base": "HP:100 Cost:120 Build:10.0s T2",
@@ -752,15 +777,15 @@
             "pri_impact_damage_mult": 1.0,
             "pri_proj_speed_mult": 1.0,
             "pri_proj_lifetime_mult": 1.0,
-            "_base_speed": "Walk:2 Run:4 Sprint:7 Jump:4.25",
-            "walk_speed_mult": 1.0,
-            "run_speed_mult": 1.0,
-            "sprint_speed_mult": 1.0,
+            "_base_speed": "Walk:2.5 Run:5.0 Sprint:6.5 Jump:5",
             "jump_speed_mult": 1.0,
             "_base_sense": "FOW:200 Target:400",
             "target_distance": 400,
             "fow_distance": 200,
-            "visible_event_radius_mult": 1.0
+            "visible_event_radius_mult": 1.0,
+            "walk_speed_mult": 1.0,
+            "run_speed_mult": 1.0,
+            "sprint_speed_mult": 1.0
         },
         "Juggernaut": {
             "_base": "HP:200 Cost:180 Build:15.0s T3",
@@ -772,15 +797,15 @@
             "pri_impact_damage_mult": 1.0,
             "pri_proj_speed_mult": 1.0,
             "pri_proj_lifetime_mult": 1.0,
-            "_base_speed": "Walk:2 Run:4 Sprint:7 Jump:4.25",
-            "walk_speed_mult": 1.0,
-            "run_speed_mult": 1.0,
-            "sprint_speed_mult": 1.0,
+            "_base_speed": "Walk:2.5 Run:4.0 Sprint:6.0 Jump:5",
             "jump_speed_mult": 1.0,
             "_base_sense": "FOW:200 Target:400",
             "target_distance": 400,
             "fow_distance": 200,
-            "visible_event_radius_mult": 1.0
+            "visible_event_radius_mult": 1.0,
+            "walk_speed_mult": 1.0,
+            "run_speed_mult": 1.0,
+            "sprint_speed_mult": 1.0
         },
         "Templar": {
             "_base": "HP:200 Cost:360 Build:20.0s T4",
@@ -792,15 +817,15 @@
             "pri_impact_damage_mult": 1.0,
             "pri_proj_speed_mult": 1.0,
             "pri_proj_lifetime_mult": 1.0,
-            "_base_speed": "Walk:2 Run:4 Sprint:7 Jump:4.25",
-            "walk_speed_mult": 1.0,
-            "run_speed_mult": 1.0,
-            "sprint_speed_mult": 1.0,
+            "_base_speed": "Walk:2.5 Run:5.0 Sprint:7.0 Jump:5",
             "jump_speed_mult": 1.0,
             "_base_sense": "FOW:200 Target:400",
             "target_distance": 400,
             "fow_distance": 200,
-            "visible_event_radius_mult": 1.0
+            "visible_event_radius_mult": 1.0,
+            "walk_speed_mult": 1.0,
+            "run_speed_mult": 1.0,
+            "sprint_speed_mult": 1.0
         },
         "_comment_cen_lf": "========== CENTAURI \u2014 Light Factory ==========",
         "Light Raider": {
@@ -1288,7 +1313,6 @@
             "_base_speed": "Move:37.5 Turbo:30",
             "move_speed_mult": 1.0,
             "turbo_speed_mult": 1.0,
-            "_base_sense": "",
             "target_distance": -1,
             "fow_distance": -1,
             "visible_event_radius_mult": 1.0
@@ -1652,7 +1676,9 @@
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": 3,
-            "build_radius": 100
+            "build_radius": 100,
+            "_base_sense": "FOW:300 Target:800",
+            "fow_distance": 300
         },
         "Node": {
             "_base": "HP:300 Cost:100 Build:6.0s T0",
@@ -1660,7 +1686,9 @@
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": -1,
-            "build_radius": 100
+            "build_radius": 100,
+            "_base_sense": "FOW:100 Target:300",
+            "fow_distance": 100
         },
         "Bio Cache": {
             "_base": "HP:3000 Cost:500 Build:10.0s T0",
@@ -1668,7 +1696,9 @@
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": -1,
-            "build_radius": 100
+            "build_radius": 100,
+            "_base_sense": "FOW:200 Target:300",
+            "fow_distance": 200
         },
         "Lesser Spawning Cyst": {
             "_base": "HP:8000 Cost:1500 Build:20.0s T0",
@@ -1676,7 +1706,9 @@
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": -1,
-            "build_radius": 100
+            "build_radius": 100,
+            "_base_sense": "FOW:200 Target:300",
+            "fow_distance": 200
         },
         "Greater Spawning Cyst": {
             "_base": "HP:16000 Cost:3000 Build:25.0s T2",
@@ -1684,7 +1716,9 @@
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": 2,
-            "build_radius": 100
+            "build_radius": 100,
+            "_base_sense": "FOW:200 Target:300",
+            "fow_distance": 200
         },
         "Grand Spawning Cyst": {
             "_base": "HP:30000 Cost:4000 Build:30.0s T4",
@@ -1692,7 +1726,9 @@
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": 4,
-            "build_radius": 100
+            "build_radius": 100,
+            "_base_sense": "FOW:200 Target:300",
+            "fow_distance": 200
         },
         "Colossal Spawning Cyst": {
             "_base": "HP:60000 Cost:6000 Build:30.0s T7",
@@ -1700,7 +1736,9 @@
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": 7,
-            "build_radius": 100
+            "build_radius": 100,
+            "_base_sense": "FOW:200 Target:300",
+            "fow_distance": 200
         },
         "Quantum Cortex": {
             "_base": "HP:12000 Cost:2000 Build:25.0s T0",
@@ -1708,7 +1746,9 @@
             "cost_mult": 1.0,
             "build_time_mult": 1.0,
             "min_tier": -1,
-            "build_radius": 100
+            "build_radius": 100,
+            "_base_sense": "FOW:200 Target:300",
+            "fow_distance": 200
         },
         "Hive Spire": {
             "_base": "HP:3000 Cost:1000 Build:35.0s T3",
@@ -1725,7 +1765,10 @@
             "accuracy_mult": 1.0,
             "magazine_mult": 1.0,
             "fire_rate_mult": 1.0,
-            "reload_time_mult": 1.0
+            "reload_time_mult": 1.0,
+            "_base_sense": "FOW:200 Target:450",
+            "fow_distance": 200,
+            "target_distance": 450
         },
         "Thorn Spire": {
             "_base": "HP:3000 Cost:1000 Build:35.0s T2",
@@ -1742,7 +1785,10 @@
             "accuracy_mult": 1.0,
             "magazine_mult": 1.0,
             "fire_rate_mult": 1.0,
-            "reload_time_mult": 1.0
+            "reload_time_mult": 1.0,
+            "_base_sense": "FOW:200 Target:650",
+            "fow_distance": 200,
+            "target_distance": 650
         }
     }
 }
