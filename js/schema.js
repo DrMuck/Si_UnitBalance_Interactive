@@ -10,7 +10,7 @@ const Schema = (() => {
     // type: 'multiplier' | 'tier' | 'float'
     const PARAM_META = {
         // Base Stats
-        health_mult:                { label: 'Health',            group: 'Base Stats',       type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales max health' },
+        health_mult:                { label: 'Health',            group: 'Base Stats',       type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales max health (server-only — client health bars and cheat mode show vanilla values)' },
         cost_mult:                  { label: 'Cost',              group: 'Base Stats',       type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales build/spawn cost' },
         build_time_mult:            { label: 'Build Time',        group: 'Base Stats',       type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales build/spawn time' },
         min_tier:                   { label: 'Min Tier',          group: 'Base Stats',       type: 'tier',       tooltip: 'Minimum tech tier required (-1 = default)' },
