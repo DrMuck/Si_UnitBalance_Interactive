@@ -14,7 +14,7 @@ const Editor = (() => {
         panel.innerHTML = '';
 
         if (!unitName) {
-            panel.innerHTML = '<div class="welcome"><h3>Select a unit from the sidebar</h3><p>Or click "Global Settings" to edit tech times, teleport, and general options.</p></div>';
+            panel.innerHTML = '<div class="welcome"><h3>Select a unit from the sidebar</h3><p>Or click "Global Settings" to edit tech times, teleport, discord, and general options.</p></div>';
             return;
         }
 
@@ -557,7 +557,47 @@ const Editor = (() => {
         descGroup.appendChild(createToggleRow('Shrimp Disable Aim', State.getShrimpDisableAim(), (v) => State.setShrimpDisableAim(v),
             'Disable AI aim tracking for Shrimp units'));
 
+        descGroup.appendChild(createToggleRow('Additional Spawn', State.getAdditionalSpawn(), (v) => State.setAdditionalSpawn(v),
+            'Enable additional spawn units for players'));
+
+        descGroup.appendChild(createToggleRow('Revert on Round End', State.getRevertOnRoundEnd(), (v) => State.setRevertOnRoundEnd(v),
+            'Revert all overrides when the round ends'));
+
+        descGroup.appendChild(createToggleRow('Watchdog Enabled', State.getWatchdogEnabled(), (v) => State.setWatchdogEnabled(v),
+            'Enable watchdog to re-apply overrides periodically'));
+
         panel.appendChild(descGroup);
+
+        // ── Discord ──
+        const discordGroup = document.createElement('div');
+        discordGroup.className = 'param-group';
+        const discordHeader = document.createElement('div');
+        discordHeader.className = 'param-group-header';
+        discordHeader.textContent = 'Discord Integration';
+        discordGroup.appendChild(discordHeader);
+
+        discordGroup.appendChild(createToggleRow('Auto Post', State.getDiscordAutoPost(), (v) => State.setDiscordAutoPost(v),
+            'Automatically post balance config summary to Discord on round start'));
+
+        const webhookRow = document.createElement('div');
+        webhookRow.className = 'param-row';
+        const webhookLabel = document.createElement('span');
+        webhookLabel.className = 'param-label';
+        webhookLabel.textContent = 'Webhook URL';
+        webhookLabel.title = 'Discord webhook URL for auto-posting balance summaries';
+        const webhookInput = document.createElement('input');
+        webhookInput.type = 'text';
+        webhookInput.className = 'param-input';
+        webhookInput.style.flex = '1';
+        webhookInput.style.minWidth = '200px';
+        webhookInput.value = State.getDiscordWebhookUrl();
+        webhookInput.placeholder = 'https://discord.com/api/webhooks/...';
+        webhookInput.addEventListener('input', () => State.setDiscordWebhookUrl(webhookInput.value.trim()));
+        webhookRow.appendChild(webhookLabel);
+        webhookRow.appendChild(webhookInput);
+        discordGroup.appendChild(webhookRow);
+
+        panel.appendChild(discordGroup);
 
         // ── Tech Time ──
         const techGroup = document.createElement('div');
