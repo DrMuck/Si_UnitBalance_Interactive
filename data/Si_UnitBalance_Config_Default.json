@@ -407,6 +407,7 @@
             "build_time_mult": 1.0,
             "min_tier": -1,
             "move_speed_mult": 1.0,
+            "turn_radius_mult": 1.0,
             "turbo_speed_mult": 1.0,
             "_base_sense": "FOW:200 Target:400",
             "target_distance": 400,
