@@ -30,7 +30,6 @@ const State = (() => {
         if (json.discord_auto_post !== undefined) currentConfig.discord_auto_post = json.discord_auto_post;
         if (json.discord_webhook_url !== undefined) currentConfig.discord_webhook_url = json.discord_webhook_url;
         if (json.watchdog_enabled !== undefined) currentConfig.watchdog_enabled = json.watchdog_enabled;
-        if (json.revert_on_round_end !== undefined) currentConfig.revert_on_round_end = json.revert_on_round_end;
 
         // Tech time
         if (json.tech_time) {
@@ -252,14 +251,6 @@ const State = (() => {
         currentConfig.watchdog_enabled = !!val;
     }
 
-    function getRevertOnRoundEnd() {
-        return currentConfig.revert_on_round_end !== false;
-    }
-
-    function setRevertOnRoundEnd(val) {
-        currentConfig.revert_on_round_end = !!val;
-    }
-
     // ── Projectile overrides ──
 
     function getProjectiles(unitName) {
@@ -314,7 +305,6 @@ const State = (() => {
         if (getDiscordAutoPost() !== false) return true;
         if (getDiscordWebhookUrl() !== '') return true;
         if (getWatchdogEnabled() !== true) return true;
-        if (getRevertOnRoundEnd() !== true) return true;
         for (let i = 1; i <= 8; i++) {
             if (isTechTimeModified(i)) return true;
         }
@@ -334,7 +324,6 @@ const State = (() => {
         if (currentConfig.discord_auto_post) out.discord_auto_post = true;
         if (currentConfig.discord_webhook_url) out.discord_webhook_url = currentConfig.discord_webhook_url;
         if (currentConfig.watchdog_enabled === false) out.watchdog_enabled = false;
-        if (currentConfig.revert_on_round_end === false) out.revert_on_round_end = false;
 
         // Tech time
         out.tech_time = {};
@@ -423,8 +412,6 @@ const State = (() => {
         setDiscordWebhookUrl,
         getWatchdogEnabled,
         setWatchdogEnabled,
-        getRevertOnRoundEnd,
-        setRevertOnRoundEnd,
         getProjectiles,
         setProjectileField,
         removeProjectileField,

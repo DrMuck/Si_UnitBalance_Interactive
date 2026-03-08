@@ -560,9 +560,6 @@ const Editor = (() => {
         descGroup.appendChild(createToggleRow('Additional Spawn', State.getAdditionalSpawn(), (v) => State.setAdditionalSpawn(v),
             'Enable additional spawn units for players'));
 
-        descGroup.appendChild(createToggleRow('Revert on Round End', State.getRevertOnRoundEnd(), (v) => State.setRevertOnRoundEnd(v),
-            'Revert all overrides when the round ends'));
-
         descGroup.appendChild(createToggleRow('Watchdog Enabled', State.getWatchdogEnabled(), (v) => State.setWatchdogEnabled(v),
             'Enable watchdog to re-apply overrides periodically'));
 
