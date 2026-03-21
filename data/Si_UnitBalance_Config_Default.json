@@ -40,7 +40,7 @@
       "walk_speed_mult": 1.0,
       "run_speed_mult": 1.0,
       "sprint_speed_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 1
     },
     "Rifleman": {
       "_base": "HP:150 Cost:40 Build:10.0s T0 Cap:S1",
@@ -61,7 +61,7 @@
       "walk_speed_mult": 1.0,
       "run_speed_mult": 1.0,
       "sprint_speed_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 1
     },
     "Sniper": {
       "_base": "HP:100 Cost:120 Build:10.0s T2 Cap:S2",
@@ -82,7 +82,7 @@
       "walk_speed_mult": 1.0,
       "run_speed_mult": 1.0,
       "sprint_speed_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Heavy": {
       "_base": "HP:200 Cost:180 Build:15.0s T3 Cap:S2",
@@ -104,7 +104,7 @@
       "walk_speed_mult": 1.0,
       "run_speed_mult": 1.0,
       "sprint_speed_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Commando": {
       "_base": "HP:200 Cost:360 Build:20.0s T4 Cap:S2",
@@ -125,7 +125,7 @@
       "walk_speed_mult": 1.0,
       "run_speed_mult": 1.0,
       "sprint_speed_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "_comment_sol_lf": "========== SOL \u2014 Light Factory ==========",
     "Light Quad": {
@@ -149,7 +149,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 1
     },
     "Platoon Hauler": {
       "_base": "HP:7000 Cost:600 Build:20.0s T0 Cap:P2",
@@ -172,7 +172,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Heavy Quad": {
       "_base": "HP:4500 Cost:500 Build:15.0s T2 Cap:P2",
@@ -195,7 +195,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Light Striker": {
       "_base": "HP:5000 Cost:800 Build:20.0s T3 Cap:P2",
@@ -222,7 +222,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Heavy Striker": {
       "_base": "HP:6500 Cost:1100 Build:30.0s T4 Cap:P3",
@@ -259,7 +259,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 3
     },
     "AA Truck": {
       "_base": "HP:5000 Cost:1100 Build:20.0s T5 Cap:P3",
@@ -285,7 +285,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 3
     },
     "_comment_sol_hf": "========== SOL \u2014 Heavy Factory ==========",
     "Hover Tank": {
@@ -324,7 +324,7 @@
       "target_distance": 1000,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 3
     },
     "Barrage Truck": {
       "_base": "HP:9000 Cost:3000 Build:30.0s T5 Cap:P3",
@@ -350,7 +350,7 @@
       "target_distance": 1000,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 3
     },
     "Railgun Tank": {
       "_base": "HP:18000 Cost:4000 Build:45.0s T6 Cap:P4",
@@ -386,7 +386,7 @@
       "target_distance": 1000,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 4
     },
     "Pulse Truck": {
       "_base": "HP:9000 Cost:1800 Build:30.0s T7 Cap:P3",
@@ -412,7 +412,7 @@
       "target_distance": 1000,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 3
     },
     "_comment_sol_uhf": "========== SOL \u2014 Ultra Heavy Factory ==========",
     "Sol Harvester": {
@@ -428,7 +428,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 1
     },
     "Siege Tank": {
       "_base": "HP:80000 Cost:4500 Build:60.0s T7 Cap:P6",
@@ -455,7 +455,7 @@
       "target_distance": 1000,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 6
     },
     "_comment_sol_air": "========== SOL \u2014 Air Factory ==========",
     "Gunship": {
@@ -497,7 +497,7 @@
       "target_distance": 800,
       "fow_distance": 400,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Dropship": {
       "_base": "HP:8000 Cost:2400 Build:35.0s T0 Cap:P4",
@@ -522,7 +522,7 @@
       "target_distance": 800,
       "fow_distance": 400,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 4
     },
     "Fighter": {
       "_base": "HP:3500 Cost:3000 Build:35.0s T7 Cap:P3",
@@ -560,7 +560,7 @@
       "target_distance": 800,
       "fow_distance": 400,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 3
     },
     "Bomber": {
       "_base": "HP:15000 Cost:5000 Build:45.0s T8 Cap:P5",
@@ -602,7 +602,7 @@
       "target_distance": 800,
       "fow_distance": 400,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 5
     },
     "_comment_struct": "========== SOL/CENTAURI \u2014 Structures ==========",
     "Sol Headquarters": {
@@ -614,7 +614,7 @@
       "build_radius": 1500,
       "_base_sense": "FOW:600 Target:300",
       "fow_distance": 600,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Cent Headquarters": {
       "_base": "Cent | HP:100000 Cost:7000 Build:120.0s T5",
@@ -625,7 +625,7 @@
       "build_radius": 1500,
       "_base_sense": "FOW:600 Target:300",
       "fow_distance": 600,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Research Facility": {
       "_base": "HP:40000 Cost:3500 Build:30.0s T0",
@@ -636,7 +636,7 @@
       "build_radius": 600,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Refinery": {
       "_base": "HP:80000 Cost:3000 Build:30.0s T0",
@@ -647,7 +647,7 @@
       "build_radius": 600,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Barracks": {
       "_base": "HP:40000 Cost:1000 Build:30.0s T0",
@@ -658,7 +658,7 @@
       "build_radius": 600,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Light Factory": {
       "_base": "HP:40000 Cost:3000 Build:30.0s T1",
@@ -669,7 +669,7 @@
       "build_radius": 600,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Air Factory": {
       "_base": "HP:80000 Cost:5000 Build:90.0s T6",
@@ -680,7 +680,7 @@
       "build_radius": 600,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Heavy Factory": {
       "_base": "HP:80000 Cost:4500 Build:60.0s T4",
@@ -691,7 +691,7 @@
       "build_radius": 600,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Ultra Heavy Factory": {
       "_base": "HP:150000 Cost:6000 Build:120.0s T7",
@@ -702,7 +702,7 @@
       "build_radius": 600,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Silo": {
       "_base": "HP:20000 Cost:500 Build:15.0s T0",
@@ -713,7 +713,7 @@
       "build_radius": 600,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Radar Station": {
       "_base": "HP:20000 Cost:1000 Build:30.0s T2",
@@ -724,7 +724,7 @@
       "build_radius": 600,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Turret": {
       "_base": "HP:5000 Cost:750 Build:35.0s T2",
@@ -745,7 +745,7 @@
       "_base_sense": "FOW:300 Target:400",
       "fow_distance": 300,
       "target_distance": 400,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Heavy Turret": {
       "_base": "HP:7000 Cost:1500 Build:35.0s T4",
@@ -766,7 +766,7 @@
       "_base_sense": "FOW:300 Target:600",
       "fow_distance": 300,
       "target_distance": 600,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Anti-Air Rocket Turret": {
       "_base": "HP:5000 Cost:2000 Build:35.0s T6",
@@ -791,7 +791,7 @@
       "_base_sense": "FOW:300 Target:600",
       "fow_distance": 300,
       "target_distance": 600,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "_comment_cen_barracks": "========== CENTAURI \u2014 Barracks ==========",
     "Militia": {
@@ -813,7 +813,7 @@
       "walk_speed_mult": 1.0,
       "run_speed_mult": 1.0,
       "sprint_speed_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 1
     },
     "Trooper": {
       "_base": "HP:150 Cost:40 Build:10.0s T0 Cap:S1",
@@ -834,7 +834,7 @@
       "walk_speed_mult": 1.0,
       "run_speed_mult": 1.0,
       "sprint_speed_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 1
     },
     "Marksman": {
       "_base": "HP:100 Cost:120 Build:10.0s T2 Cap:S2",
@@ -855,7 +855,7 @@
       "walk_speed_mult": 1.0,
       "run_speed_mult": 1.0,
       "sprint_speed_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Juggernaut": {
       "_base": "HP:200 Cost:180 Build:15.0s T3 Cap:S2",
@@ -877,7 +877,7 @@
       "walk_speed_mult": 1.0,
       "run_speed_mult": 1.0,
       "sprint_speed_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Templar": {
       "_base": "HP:200 Cost:360 Build:20.0s T4 Cap:S2",
@@ -898,7 +898,7 @@
       "walk_speed_mult": 1.0,
       "run_speed_mult": 1.0,
       "sprint_speed_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "_comment_cen_lf": "========== CENTAURI \u2014 Light Factory ==========",
     "Light Raider": {
@@ -922,7 +922,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 1
     },
     "Squad Transport": {
       "_base": "HP:6000 Cost:300 Build:20.0s T0 Cap:P2",
@@ -945,7 +945,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Heavy Raider": {
       "_base": "HP:5000 Cost:500 Build:15.0s T2 Cap:P2",
@@ -968,7 +968,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Assault Car": {
       "_base": "HP:5000 Cost:800 Build:20.0s T3 Cap:P2",
@@ -1005,7 +1005,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Strike Tank": {
       "_base": "HP:8000 Cost:800 Build:20.0s T3 Cap:P3",
@@ -1032,7 +1032,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 3
     },
     "Flak Car": {
       "_base": "HP:5000 Cost:1100 Build:20.0s T5 Cap:P3",
@@ -1058,7 +1058,7 @@
       "target_distance": 1000,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 3
     },
     "_comment_cen_hf": "========== CENTAURI \u2014 Heavy Factory ==========",
     "Combat Tank": {
@@ -1095,7 +1095,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 3
     },
     "Rocket Tank": {
       "_base": "HP:11000 Cost:3000 Build:30.0s T5 Cap:P4",
@@ -1121,7 +1121,7 @@
       "target_distance": 1000,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 4
     },
     "Heavy Tank": {
       "_base": "HP:18000 Cost:4000 Build:45.0s T6 Cap:P4",
@@ -1161,7 +1161,7 @@
       "target_distance": 1000,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 4
     },
     "Pyro Tank": {
       "_base": "HP:11000 Cost:1800 Build:30.0s T7 Cap:P3",
@@ -1187,7 +1187,7 @@
       "target_distance": 1000,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 3
     },
     "_comment_cen_uhf": "========== CENTAURI \u2014 Ultra Heavy Factory ==========",
     "Cent Harvester": {
@@ -1202,7 +1202,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 1
     },
     "Crimson Tank": {
       "_base": "HP:80000 Cost:4500 Build:60.0s T7 Cap:P6",
@@ -1229,7 +1229,7 @@
       "target_distance": 1000,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 6
     },
     "_comment_cen_air": "========== CENTAURI \u2014 Air Factory ==========",
     "Shuttle": {
@@ -1260,7 +1260,7 @@
       "target_distance": 800,
       "fow_distance": 400,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 4
     },
     "Dreadnought": {
       "_base": "HP:10000 Cost:3500 Build:35.0s T0 Cap:P3",
@@ -1304,7 +1304,7 @@
       "target_distance": 800,
       "fow_distance": 400,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 3
     },
     "Interceptor": {
       "_base": "HP:2500 Cost:3000 Build:30.0s T7 Cap:P2",
@@ -1346,7 +1346,7 @@
       "target_distance": 800,
       "fow_distance": 400,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Freighter": {
       "_base": "HP:15000 Cost:5000 Build:45.0s T8 Cap:P5",
@@ -1389,7 +1389,7 @@
       "target_distance": 800,
       "fow_distance": 400,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 5
     },
     "_comment_htp": "========== HTP \u2014 Hover Bike ==========",
     "Hover Bike": {
@@ -1405,7 +1405,7 @@
       "target_distance": -1,
       "fow_distance": -1,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "_comment_alien_lesser": "========== ALIEN \u2014 Lesser Spawning Cyst ==========",
     "Crab": {
@@ -1426,7 +1426,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 1
     },
     "Shrimp": {
       "_base": "HP:150 Cost:160 Build:15.0s T0 Cap:S1",
@@ -1449,7 +1449,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 1
     },
     "Shocker": {
       "_base": "HP:400 Cost:220 Build:20.0s T1 Cap:S2",
@@ -1477,7 +1477,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Wasp": {
       "_base": "HP:300 Cost:200 Build:20.0s T4 Cap:S1",
@@ -1497,7 +1497,7 @@
       "target_distance": 400,
       "fow_distance": 400,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 1
     },
     "Dragonfly": {
       "_base": "HP:300 Cost:400 Build:25.0s T5 Cap:S2",
@@ -1525,7 +1525,7 @@
       "target_distance": 400,
       "fow_distance": 400,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Squid": {
       "_base": "HP:300 Cost:120 Build:10.0s T6 Cap:S1",
@@ -1543,7 +1543,7 @@
       "target_distance": 400,
       "fow_distance": 400,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 1
     },
     "_comment_alien_greater": "========== ALIEN \u2014 Greater Spawning Cyst ==========",
     "Horned Crab": {
@@ -1564,7 +1564,7 @@
       "target_distance": 400,
       "fow_distance": 200,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Hunter": {
       "_base": "HP:5000 Cost:500 Build:30.0s T3 Cap:P1",
@@ -1584,7 +1584,7 @@
       "target_distance": 800,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 1
     },
     "Behemoth": {
       "_base": "HP:10000 Cost:1200 Build:45.0s T4 Cap:P2",
@@ -1612,7 +1612,7 @@
       "target_distance": 800,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 2
     },
     "Scorpion": {
       "_base": "HP:9000 Cost:1600 Build:45.0s T5 Cap:P3",
@@ -1639,7 +1639,7 @@
       "target_distance": 800,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 3
     },
     "Firebug": {
       "_base": "HP:5000 Cost:2400 Build:45.0s T6 Cap:P3",
@@ -1666,7 +1666,7 @@
       "target_distance": 400,
       "fow_distance": 400,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 3
     },
     "_comment_alien_grand": "========== ALIEN \u2014 Grand Spawning Cyst ==========",
     "Goliath": {
@@ -1687,7 +1687,7 @@
       "target_distance": 800,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 4
     },
     "_comment_alien_colossal": "========== ALIEN \u2014 Colossal Spawning Cyst ==========",
     "Defiler": {
@@ -1716,7 +1716,7 @@
       "target_distance": 800,
       "fow_distance": 400,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 8
     },
     "Colossus": {
       "_base": "HP:100000 Cost:6000 Build:120.0s T8 Cap:P15",
@@ -1744,7 +1744,7 @@
       "target_distance": 800,
       "fow_distance": 400,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 15
     },
     "_comment_alien_nest": "========== ALIEN \u2014 Nest ==========",
     "Queen": {
@@ -1772,7 +1772,7 @@
       "target_distance": 800,
       "fow_distance": 300,
       "visible_event_radius_mult": 1.0,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "_comment_alien_struct": "========== ALIEN \u2014 Structures ==========",
     "Nest": {
@@ -1784,7 +1784,7 @@
       "build_radius": 100,
       "_base_sense": "FOW:300 Target:800",
       "fow_distance": 300,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Node": {
       "_base": "HP:300 Cost:100 Build:6.0s T0",
@@ -1795,7 +1795,7 @@
       "build_radius": 100,
       "_base_sense": "FOW:100 Target:300",
       "fow_distance": 100,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Bio Cache": {
       "_base": "HP:3000 Cost:500 Build:10.0s T0",
@@ -1806,7 +1806,7 @@
       "build_radius": 100,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Lesser Spawning Cyst": {
       "_base": "HP:8000 Cost:1500 Build:20.0s T0",
@@ -1817,7 +1817,7 @@
       "build_radius": 100,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Greater Spawning Cyst": {
       "_base": "HP:16000 Cost:3000 Build:25.0s T2",
@@ -1828,7 +1828,7 @@
       "build_radius": 100,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Grand Spawning Cyst": {
       "_base": "HP:30000 Cost:4000 Build:30.0s T4",
@@ -1839,7 +1839,7 @@
       "build_radius": 100,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Colossal Spawning Cyst": {
       "_base": "HP:60000 Cost:6000 Build:30.0s T7",
@@ -1850,7 +1850,7 @@
       "build_radius": 100,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Quantum Cortex": {
       "_base": "HP:12000 Cost:2000 Build:25.0s T0",
@@ -1861,7 +1861,7 @@
       "build_radius": 100,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Hive Spire": {
       "_base": "HP:3000 Cost:1000 Build:35.0s T3",
@@ -1882,7 +1882,7 @@
       "_base_sense": "FOW:200 Target:450",
       "fow_distance": 200,
       "target_distance": 450,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     },
     "Thorn Spire": {
       "_base": "HP:3000 Cost:1000 Build:35.0s T2",
@@ -1903,7 +1903,7 @@
       "_base_sense": "FOW:200 Target:650",
       "fow_distance": 200,
       "target_distance": 650,
-      "unit_cap_value": -1
+      "unit_cap_value": 0
     }
   }
 }

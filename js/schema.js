@@ -81,7 +81,7 @@ const Schema = (() => {
         visible_event_radius_mult:  { label: 'Vis Event Radius',   group: 'Detection',        type: 'multiplier', min: 0.1, max: 5.0, step: 0.01, tooltip: 'Scales visible event radius' },
 
         // Special
-        unit_cap_value:             { label: 'Unit Cap Value',     group: 'Base Stats',       type: 'float', min: -1, max: 20, step: 1, tooltip: 'Unit cap cost for this unit (-1 = default). Primary cap: vehicles/heavy units, Secondary cap: infantry/light creatures. 0 = free.' },
+        unit_cap_value:             { label: 'Unit Cap Value',     group: 'Base Stats',       type: 'float', min: 0, max: 20, step: 1, tooltip: 'Unit cap cost for this unit. Primary cap: vehicles/heavy units, Secondary cap: infantry/light creatures. 0 = free (no cap cost).' },
         dispense_timeout:           { label: 'Dispense Timeout',   group: 'Special',          type: 'float', min: -1, max: 600, step: 1, tooltip: 'Vehicle dispense timeout in seconds (-1 = default)' },
     };
 
