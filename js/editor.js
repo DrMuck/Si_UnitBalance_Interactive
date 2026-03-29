@@ -14,7 +14,7 @@ const Editor = (() => {
         panel.innerHTML = '';
 
         if (!unitName) {
-            panel.innerHTML = '<div class="welcome"><h3>Select a unit from the sidebar</h3><p>Or click "Global Settings" to edit tech times, teleport, discord, and general options.</p></div>';
+            panel.innerHTML = '<div class="welcome"><h3>Select a unit from the sidebar</h3><p>Or click "Global Settings" to edit tech times, teleport, decay, discord, and general options.</p></div>';
             return;
         }
 
@@ -638,6 +638,55 @@ const Editor = (() => {
             'Teleport animation duration (seconds, leave empty = default)'));
 
         panel.appendChild(tpGroup);
+
+        // ── Decay (per-faction) ──
+        const decayGroup = document.createElement('div');
+        decayGroup.className = 'param-group';
+        const decayHeader = document.createElement('div');
+        decayHeader.className = 'param-group-header';
+        decayHeader.textContent = 'Structure Decay';
+        decayGroup.appendChild(decayHeader);
+
+        const decayNote = document.createElement('div');
+        decayNote.className = 'param-info-text';
+        decayNote.textContent = 'Per-faction decay when structures lose HQ/Nest anchor. Use -1 for vanilla defaults.';
+        decayGroup.appendChild(decayNote);
+
+        const decay = State.getDecay();
+
+        for (const faction of ['human', 'alien']) {
+            const fData = (decay[faction]) || {};
+
+            const fSection = document.createElement('div');
+            fSection.style.padding = '8px';
+            fSection.style.background = faction === 'human' ? 'rgba(79, 195, 247, 0.04)' : 'rgba(255, 152, 0, 0.04)';
+            fSection.style.borderRadius = '4px';
+            fSection.style.marginBottom = '8px';
+
+            const fLabel = document.createElement('div');
+            fLabel.style.fontSize = '14px';
+            fLabel.style.fontWeight = 'bold';
+            fLabel.style.marginBottom = '6px';
+            fLabel.textContent = faction === 'human' ? 'Human (Sol / Centauri)' : 'Alien';
+            fSection.appendChild(fLabel);
+
+            fSection.appendChild(createDecayToggleRow('Enabled', faction, 'enabled', fData.enabled !== false,
+                'Enable/disable structure decay for this faction'));
+            fSection.appendChild(createDecayToggleRow('Keep Production', faction, 'keep_production', !!fData.keep_production,
+                'Allow unlinked structures to keep producing (factories, barracks) while decay is active'));
+            fSection.appendChild(createDecayNumRow('Delay', faction, 'delay', fData.delay,
+                'Time before decay starts (seconds)', 's', 'vanilla: 10s'));
+            fSection.appendChild(createDecayNumRow('Tick', faction, 'tick', fData.tick,
+                'Interval between damage ticks (seconds)', 's', 'vanilla: 5s'));
+            fSection.appendChild(createDecayNumRow('Amount %', faction, 'amount_pct', fData.amount_pct,
+                'Damage per tick as fraction of max HP', '', 'vanilla: 0.01'));
+            fSection.appendChild(createDecayNumRow('Randomize %', faction, 'randomize_pct', fData.randomize_pct,
+                'Randomization range for damage', '', 'vanilla: 0.2'));
+
+            decayGroup.appendChild(fSection);
+        }
+
+        panel.appendChild(decayGroup);
     }
 
     function createToggleRow(labelText, value, onChange, tooltip) {
@@ -762,6 +811,71 @@ const Editor = (() => {
             } else {
                 const num = parseFloat(v);
                 if (!isNaN(num)) State.setTeleportParam(key, num);
+            }
+        });
+
+        row.appendChild(label);
+        row.appendChild(input);
+        row.appendChild(hint);
+        return row;
+    }
+
+    function createDecayToggleRow(labelText, faction, key, value, tooltip) {
+        const row = document.createElement('div');
+        row.className = 'param-row';
+
+        const label = document.createElement('span');
+        label.className = 'param-label';
+        label.textContent = labelText;
+        if (tooltip) label.title = tooltip;
+
+        const toggle = document.createElement('label');
+        toggle.className = 'toggle-switch';
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.checked = value;
+        const slider = document.createElement('span');
+        slider.className = 'toggle-slider';
+        toggle.appendChild(input);
+        toggle.appendChild(slider);
+
+        input.addEventListener('change', () => {
+            State.setDecayParam(faction, key, input.checked);
+        });
+
+        row.appendChild(label);
+        row.appendChild(toggle);
+        return row;
+    }
+
+    function createDecayNumRow(labelText, faction, key, value, tooltip, unit, placeholder) {
+        const row = document.createElement('div');
+        row.className = 'param-row';
+
+        const label = document.createElement('span');
+        label.className = 'param-label';
+        label.textContent = labelText;
+        if (tooltip) label.title = tooltip;
+
+        const input = document.createElement('input');
+        input.type = 'number';
+        input.className = 'param-input';
+        input.style.width = '100px';
+        input.step = key.includes('pct') ? 0.001 : 0.5;
+        input.value = (value !== undefined && value !== null && value !== -1) ? value : '';
+        input.placeholder = placeholder || '-1 = default';
+
+        const hint = document.createElement('span');
+        hint.className = 'param-hint';
+        hint.textContent = unit || '';
+
+        input.addEventListener('input', () => {
+            const v = input.value.trim();
+            if (v === '') {
+                State.setDecayParam(faction, key, -1);
+            } else {
+                const num = parseFloat(v);
+                if (!isNaN(num)) State.setDecayParam(faction, key, num);
             }
         });
 

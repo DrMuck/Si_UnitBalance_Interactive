@@ -45,7 +45,7 @@ const State = (() => {
         // Units
         if (json.units) {
             for (const [name, data] of Object.entries(json.units)) {
-                if (name.startsWith('_') && name !== '_teleport') continue;
+                if (name.startsWith('_') && name !== '_teleport' && name !== '_decay') continue;
                 if (!currentConfig.units[name]) currentConfig.units[name] = {};
                 for (const [k, v] of Object.entries(data)) {
                     if (k.startsWith('_')) continue;
@@ -58,6 +58,19 @@ const State = (() => {
             }
             if (json.units._teleport) {
                 currentConfig.units._teleport = deepClone(json.units._teleport);
+            }
+            if (json.units._decay) {
+                currentConfig.units._decay = deepClone(json.units._decay);
+            }
+        }
+
+        // Top-level decay section (also support decay at root level)
+        if (json.decay) {
+            if (!currentConfig.decay) currentConfig.decay = {};
+            for (const faction of ['human', 'alien']) {
+                if (json.decay[faction]) {
+                    currentConfig.decay[faction] = deepClone(json.decay[faction]);
+                }
             }
         }
     }
@@ -193,6 +206,28 @@ const State = (() => {
         return JSON.stringify(cur || {}) !== JSON.stringify(def || {});
     }
 
+    // ── Decay ──
+
+    function getDecay() {
+        return currentConfig.decay ? deepClone(currentConfig.decay) : {};
+    }
+
+    function setDecayParam(faction, key, value) {
+        if (!currentConfig.decay) currentConfig.decay = {};
+        if (!currentConfig.decay[faction]) currentConfig.decay[faction] = {};
+        if (value === '' || value === undefined) {
+            delete currentConfig.decay[faction][key];
+        } else {
+            currentConfig.decay[faction][key] = value;
+        }
+    }
+
+    function isDecayModified() {
+        const cur = currentConfig.decay;
+        const def = defaultConfig.decay;
+        return JSON.stringify(cur || {}) !== JSON.stringify(def || {});
+    }
+
     // ── Top-level ──
 
     function getDescription() {
@@ -309,6 +344,7 @@ const State = (() => {
             if (isTechTimeModified(i)) return true;
         }
         if (isTeleportModified()) return true;
+        if (isDecayModified()) return true;
         return false;
     }
 
@@ -376,6 +412,12 @@ const State = (() => {
             out.units._teleport = tp;
         }
 
+        // Decay
+        const decay = getDecay();
+        if (Object.keys(decay).length > 0) {
+            out.decay = decay;
+        }
+
         return out;
     }
 
@@ -398,6 +440,9 @@ const State = (() => {
         getTeleport,
         setTeleportParam,
         isTeleportModified,
+        getDecay,
+        setDecayParam,
+        isDecayModified,
         getDescription,
         setDescription,
         getEnabled,

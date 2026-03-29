@@ -64,8 +64,8 @@ const IO = (() => {
         reader.onload = (evt) => {
             try {
                 const json = JSON.parse(evt.target.result);
-                if (!json.units && !json.tech_time) {
-                    showToast('Invalid config: missing "units" or "tech_time"');
+                if (!json.units && !json.tech_time && !json.decay) {
+                    showToast('Invalid config: missing "units", "tech_time", or "decay"');
                     return;
                 }
                 State.importConfig(json);
