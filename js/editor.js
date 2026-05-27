@@ -622,6 +622,25 @@ const Editor = (() => {
         updateTotal();
         panel.appendChild(techGroup);
 
+        // ── Tech Cost ── (sentinel -1 = vanilla / no override)
+        const techCostGroup = document.createElement('div');
+        techCostGroup.className = 'param-group';
+        const techCostHeader = document.createElement('div');
+        techCostHeader.className = 'param-group-header';
+        techCostHeader.textContent = 'Tech Research Cost';
+        techCostGroup.appendChild(techCostHeader);
+
+        const costHint = document.createElement('div');
+        costHint.className = 'tech-total';
+        costHint.style.opacity = '0.7';
+        costHint.textContent = '-1 = vanilla (keep game default), 0+ = explicit resource cost';
+        techCostGroup.appendChild(costHint);
+
+        for (let tier = 1; tier <= 8; tier++) {
+            techCostGroup.appendChild(createTechCostRow(tier));
+        }
+        panel.appendChild(techCostGroup);
+
         // ── Teleport ──
         const tpGroup = document.createElement('div');
         tpGroup.className = 'param-group';
@@ -774,6 +793,69 @@ const Editor = (() => {
 
     function updateTechRowStyle(row, tier) {
         if (State.isTechTimeModified(tier)) {
+            row.style.borderLeft = '3px solid #4fc3f7';
+            row.style.background = 'rgba(79, 195, 247, 0.04)';
+        } else {
+            row.style.borderLeft = '3px solid transparent';
+            row.style.background = '';
+        }
+    }
+
+    // Tech-cost row: number input + a "vanilla" reset button. Uses -1 sentinel.
+    function createTechCostRow(tier) {
+        const row = document.createElement('div');
+        row.className = 'tech-row';
+
+        const label = document.createElement('span');
+        label.className = 'tech-label';
+        label.textContent = 'Tier ' + tier;
+
+        const numInput = document.createElement('input');
+        numInput.type = 'number';
+        numInput.className = 'param-input';
+        numInput.style.width = '90px';
+        numInput.min = 0;
+        numInput.max = 99999;
+        numInput.step = 10;
+        numInput.placeholder = 'vanilla';
+
+        function refreshDisplay() {
+            const v = State.getTechCost(tier);
+            numInput.value = (v < 0) ? '' : v;
+            updateTechCostRowStyle(row, tier);
+        }
+
+        const vanillaBtn = document.createElement('button');
+        vanillaBtn.className = 'btn-small';
+        vanillaBtn.textContent = 'vanilla';
+        vanillaBtn.title = 'Reset to vanilla (no override)';
+        vanillaBtn.addEventListener('click', () => {
+            State.setTechCost(tier, -1);
+            refreshDisplay();
+        });
+
+        numInput.addEventListener('input', () => {
+            const raw = numInput.value.trim();
+            if (raw === '' || raw === '-1') {
+                State.setTechCost(tier, -1);
+            } else {
+                const v = parseInt(raw);
+                if (isNaN(v) || v < 0) return;
+                State.setTechCost(tier, v);
+            }
+            updateTechCostRowStyle(row, tier);
+        });
+
+        row.appendChild(label);
+        row.appendChild(numInput);
+        row.appendChild(vanillaBtn);
+
+        refreshDisplay();
+        return row;
+    }
+
+    function updateTechCostRowStyle(row, tier) {
+        if (State.isTechCostModified(tier)) {
             row.style.borderLeft = '3px solid #4fc3f7';
             row.style.background = 'rgba(79, 195, 247, 0.04)';
         } else {

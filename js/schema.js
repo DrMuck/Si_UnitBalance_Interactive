@@ -17,6 +17,7 @@ const Schema = (() => {
 
         // Placement
         build_radius:               { label: 'Build Radius',      group: 'Placement',        type: 'float', min: 50, max: 2000, step: 10, tooltip: 'Build radius in meters' },
+        deposit_radius:             { label: 'Deposit Radius',    group: 'Placement',        type: 'float', min: 5,  max: 200,  step: 5,  tooltip: 'Resource deposit radius in meters (default 15). Shrimps deposit resources within this radius.' },
 
         // Single weapon (turrets / alien defense)
         impact_damage_mult:         { label: 'Impact Damage',      group: 'Weapon',           type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales impact (direct hit) damage' },

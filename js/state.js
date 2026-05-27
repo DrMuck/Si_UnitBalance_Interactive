@@ -42,6 +42,17 @@ const State = (() => {
             }
         }
 
+        // Tech cost (-1 sentinel = no override / vanilla cost kept)
+        if (json.tech_cost) {
+            if (!currentConfig.tech_cost) currentConfig.tech_cost = {};
+            for (let i = 1; i <= 8; i++) {
+                const key = 'tier_' + i;
+                if (json.tech_cost[key] !== undefined) {
+                    currentConfig.tech_cost[key] = json.tech_cost[key];
+                }
+            }
+        }
+
         // Units
         if (json.units) {
             for (const [name, data] of Object.entries(json.units)) {
@@ -181,6 +192,28 @@ const State = (() => {
         const def = (defaultConfig.tech_time && defaultConfig.tech_time[key] !== undefined)
             ? defaultConfig.tech_time[key] : 30;
         return Math.abs(cur - def) > 0.01;
+    }
+
+    // ── Tech cost ── (sentinel -1 = vanilla / no override)
+    function getTechCost(tier) {
+        const key = 'tier_' + tier;
+        if (currentConfig.tech_cost && currentConfig.tech_cost[key] !== undefined) {
+            return currentConfig.tech_cost[key];
+        }
+        return -1;
+    }
+
+    function setTechCost(tier, value) {
+        if (!currentConfig.tech_cost) currentConfig.tech_cost = {};
+        currentConfig.tech_cost['tier_' + tier] = value;
+    }
+
+    function isTechCostModified(tier) {
+        const cur = getTechCost(tier);
+        const key = 'tier_' + tier;
+        const def = (defaultConfig.tech_cost && defaultConfig.tech_cost[key] !== undefined)
+            ? defaultConfig.tech_cost[key] : -1;
+        return cur !== def;
     }
 
     // ── Teleport ──
@@ -367,6 +400,12 @@ const State = (() => {
             out.tech_time['tier_' + i] = getTechTime(i);
         }
 
+        // Tech cost (-1 = vanilla / no override)
+        out.tech_cost = {};
+        for (let i = 1; i <= 8; i++) {
+            out.tech_cost['tier_' + i] = getTechCost(i);
+        }
+
         // Units — only include entries with non-default values
         out.units = {};
 
@@ -437,6 +476,9 @@ const State = (() => {
         getTechTime,
         setTechTime,
         isTechTimeModified,
+        getTechCost,
+        setTechCost,
+        isTechCostModified,
         getTeleport,
         setTeleportParam,
         isTeleportModified,

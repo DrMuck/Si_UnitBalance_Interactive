@@ -14,6 +14,17 @@
     "tier_7": 30,
     "tier_8": 30
   },
+  "tech_cost": {
+    "_note": "Resource cost per tech tier research (all factions). -1 = vanilla (no override), 0+ = explicit cost.",
+    "tier_1": -1,
+    "tier_2": -1,
+    "tier_3": -1,
+    "tier_4": -1,
+    "tier_5": -1,
+    "tier_6": -1,
+    "tier_7": -1,
+    "tier_8": -1
+  },
   "decay": {
     "_note": "Structure decay when not anchored to HQ/Nest. enabled=false disables decay. Vanilla: delay=10, tick=5, amount_pct=0.01, randomize_pct=0.2",
     "human": {
@@ -1823,6 +1834,7 @@
       "build_time_mult": 1.0,
       "min_tier": -1,
       "build_radius": 100,
+      "deposit_radius": -1,
       "_base_sense": "FOW:200 Target:300",
       "fow_distance": 200,
       "unit_cap_value": 0
