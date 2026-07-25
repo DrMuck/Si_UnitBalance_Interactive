@@ -33,6 +33,13 @@ const Schema = (() => {
         fire_rate_mult:             { label: 'Fire Rate',          group: 'Weapon',           type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales fire rate (divides fire interval)' },
         reload_time_mult:           { label: 'Reload Time',        group: 'Weapon',           type: 'multiplier', min: 0.1, max: 5.0,  step: 0.01, tooltip: 'Scales reload time' },
 
+        // Ballistics / projectile drop-off (applies to every ProjectileData the unit fires)
+        impact_scale_by_speed:      { label: 'Damage Drop-off',    group: 'Ballistics',       type: 'bool3',                                  tooltip: 'Impact damage scales with the projectile’s current (drag-reduced) speed. On = damage falls off with range; Off = flat damage at any range (e.g. Siege plasma). Default = leave vanilla.' },
+        drag_mult:                  { label: 'Drag',               group: 'Ballistics',       type: 'multiplier', min: 0.1, max: 5.0,  step: 0.05, tooltip: 'Scales projectile air drag (m_fDragCoefficient). <1 = flatter/longer-carrying shot and gentler damage drop-off; >1 = slows faster.' },
+        ai_lead_drag:               { label: 'AI Lead: Drag',      group: 'Ballistics',       type: 'float', min: -1, max: 5, step: 0.05, tooltip: 'Absolute AI aim-lead factor for drag (-1 = vanilla). Raise if AI shots land short on a draggy projectile.' },
+        ai_lead_velocity:           { label: 'AI Lead: Velocity',  group: 'Ballistics',       type: 'float', min: -1, max: 5, step: 0.05, tooltip: 'Absolute AI aim-lead factor for velocity (-1 = vanilla).' },
+        ai_lead_gravity:            { label: 'AI Lead: Gravity',   group: 'Ballistics',       type: 'float', min: -1, max: 5, step: 0.05, tooltip: 'Absolute AI aim-lead factor for gravity (-1 = vanilla). Raise for high-arc shells.' },
+
         // Primary weapon
         pri_damage_mult:            { label: 'Damage',             group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales primary weapon damage (melee)' },
         pri_impact_damage_mult:     { label: 'Impact Damage',      group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales primary impact damage' },

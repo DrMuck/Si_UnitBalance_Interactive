@@ -168,6 +168,26 @@ const Editor = (() => {
             });
 
             row.appendChild(select);
+        } else if (meta && meta.type === 'bool3') {
+            // Tri-state toggle: Default (leave vanilla / omit on export) / On / Off.
+            // Stored as the string 'default'|'on'|'off'; imported real booleans map in.
+            const select = document.createElement('select');
+            select.className = 'param-select';
+            for (const [v, text] of [['default', 'Default (vanilla)'], ['on', 'On'], ['off', 'Off']]) {
+                const opt = document.createElement('option');
+                opt.value = v;
+                opt.textContent = text;
+                select.appendChild(opt);
+            }
+            select.value = value === true ? 'on' : value === false ? 'off' : (value || 'default');
+
+            select.addEventListener('change', () => {
+                State.setUnitParam(unitName, paramKey, select.value);
+                updateRowModified(row, unitName, paramKey);
+                Tree.refreshBadges();
+            });
+
+            row.appendChild(select);
         } else if (meta && meta.type === 'float') {
             const numInput = document.createElement('input');
             numInput.type = 'number';

@@ -423,6 +423,20 @@ const State = (() => {
 
                     const cur = getUnitParam(unitName, key);
                     const def = defData[key];
+
+                    // Tri-state toggle (impact_scale_by_speed): 'default' means leave
+                    // vanilla → omit; 'on'/'off' export as a real JSON boolean so the mod
+                    // reads it via Value<bool?>().
+                    const meta = Schema.getParamMeta(key);
+                    if (meta && meta.type === 'bool3') {
+                        const norm = cur === true ? 'on' : cur === false ? 'off' : (cur || 'default');
+                        if (norm === 'on' || norm === 'off') {
+                            entry[key] = (norm === 'on');
+                            hasValues = true;
+                        }
+                        continue;
+                    }
+
                     const isDiff = typeof cur === 'number' && typeof def === 'number'
                         ? Math.abs(cur - def) > 0.0001
                         : cur !== def;
