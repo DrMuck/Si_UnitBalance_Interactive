@@ -36,9 +36,9 @@ const Schema = (() => {
         // Ballistics / projectile drop-off (applies to every ProjectileData the unit fires)
         impact_scale_by_speed:      { label: 'Damage Drop-off',    group: 'Ballistics',       type: 'bool3',                                  tooltip: 'Impact damage scales with the projectile’s current (drag-reduced) speed. On = damage falls off with range; Off = flat damage at any range (e.g. Siege plasma). Default = leave vanilla.' },
         drag_mult:                  { label: 'Drag',               group: 'Ballistics',       type: 'multiplier', min: 0.1, max: 5.0,  step: 0.05, tooltip: 'Scales projectile air drag (m_fDragCoefficient). <1 = flatter/longer-carrying shot and gentler damage drop-off; >1 = slows faster.' },
-        ai_lead_drag:               { label: 'AI Lead: Drag',      group: 'Ballistics',       type: 'float', min: -1, max: 5, step: 0.05, tooltip: 'Absolute AI aim-lead factor for drag (-1 = vanilla). Raise if AI shots land short on a draggy projectile.' },
-        ai_lead_velocity:           { label: 'AI Lead: Velocity',  group: 'Ballistics',       type: 'float', min: -1, max: 5, step: 0.05, tooltip: 'Absolute AI aim-lead factor for velocity (-1 = vanilla).' },
-        ai_lead_gravity:            { label: 'AI Lead: Gravity',   group: 'Ballistics',       type: 'float', min: -1, max: 5, step: 0.05, tooltip: 'Absolute AI aim-lead factor for gravity (-1 = vanilla). Raise for high-arc shells.' },
+        ai_lead_velocity:           { label: 'AI Lead: Velocity',  group: 'Ballistics',       type: 'multiplier', min: 0.1, max: 5.0, step: 0.05, tooltip: 'Multiplier on the AI aim-lead velocity factor, layered on top of the automatic speed compensation. >1 = AI leads more (fixes shots landing short). Only applies to units with a projectile speed/range override.' },
+        ai_lead_gravity:            { label: 'AI Lead: Gravity',   group: 'Ballistics',       type: 'multiplier', min: 0.1, max: 5.0, step: 0.05, tooltip: 'Multiplier on the AI aim-lead gravity factor. Raise for high-arc shells that land short.' },
+        ai_lead_drag:               { label: 'AI Lead: Drag',      group: 'Ballistics',       type: 'multiplier', min: 0.1, max: 5.0, step: 0.05, tooltip: 'Multiplier on the AI aim-lead drag factor. Raise if AI under-leads a draggy (decelerating) projectile like the Crimson Tank shell.' },
 
         // Primary weapon
         pri_damage_mult:            { label: 'Damage',             group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales primary weapon damage (melee)' },
@@ -96,7 +96,7 @@ const Schema = (() => {
     // ── Display order of parameter groups ──
     const GROUP_ORDER = [
         'Base Stats', 'Placement',
-        'Primary Weapon', 'Secondary Weapon', 'Weapon',
+        'Primary Weapon', 'Secondary Weapon', 'Weapon', 'Ballistics',
         'Movement', 'Detection', 'Special'
     ];
 
@@ -109,6 +109,7 @@ const Schema = (() => {
         '_weapon':      'Weapon',
         '_base_speed':  'Movement',
         '_base_sense':  'Detection',
+        '_ballistics':  'Ballistics',
     };
 
     // ── Projectile fields for per-projectile overrides ──

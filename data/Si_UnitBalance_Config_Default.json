@@ -73,9 +73,9 @@
             "unit_cap_value": 1,
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Rifleman": {
             "_base": "HP:150 Cost:40 Build:10.0s T0 Cap:S1",
@@ -99,9 +99,9 @@
             "unit_cap_value": 1,
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Sniper": {
             "_base": "HP:100 Cost:120 Build:10.0s T2 Cap:S2",
@@ -125,9 +125,9 @@
             "unit_cap_value": 2,
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Heavy": {
             "_base": "HP:200 Cost:180 Build:15.0s T3 Cap:S2",
@@ -150,11 +150,12 @@
             "run_speed_mult": 1.0,
             "sprint_speed_mult": 1.0,
             "unit_cap_value": 2,
+            "_ballistics": "vanilla: dropoff:OFF  drag:0.3  spd:200  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Commando": {
             "_base": "HP:200 Cost:360 Build:20.0s T4 Cap:S2",
@@ -178,9 +179,9 @@
             "unit_cap_value": 2,
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "_comment_sol_lf": "========== SOL — Light Factory ==========",
         "Light Quad": {
@@ -205,11 +206,12 @@
             "fow_distance": 200,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 1,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.215  spd:400  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Platoon Hauler": {
             "_base": "HP:7000 Cost:600 Build:20.0s T0 Cap:P2",
@@ -233,11 +235,12 @@
             "fow_distance": 200,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 2,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.215  spd:400  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Heavy Quad": {
             "_base": "HP:4500 Cost:500 Build:15.0s T2 Cap:P2",
@@ -261,11 +264,12 @@
             "fow_distance": 200,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 2,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.215  spd:400  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Light Striker": {
             "_base": "HP:5000 Cost:800 Build:20.0s T3 Cap:P2",
@@ -293,11 +297,12 @@
             "fow_distance": 200,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 2,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.215  spd:400  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Heavy Striker": {
             "_base": "HP:6500 Cost:1100 Build:30.0s T4 Cap:P3",
@@ -335,11 +340,12 @@
             "fow_distance": 200,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 3,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:400  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "AA Truck": {
             "_base": "HP:5000 Cost:1100 Build:20.0s T5 Cap:P3",
@@ -366,11 +372,12 @@
             "fow_distance": 200,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 3,
+            "_ballistics": "vanilla: dropoff:OFF  drag:0.3  spd:100  AIlead d/v/g:1/1.25/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "_comment_sol_hf": "========== SOL — Heavy Factory ==========",
         "Hover Tank": {
@@ -410,11 +417,12 @@
             "fow_distance": 300,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 3,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:500  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Barrage Truck": {
             "_base": "HP:9000 Cost:3000 Build:30.0s T5 Cap:P3",
@@ -441,11 +449,12 @@
             "fow_distance": 300,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 3,
+            "_ballistics": "vanilla: dropoff:OFF  drag:0.3  spd:85  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Railgun Tank": {
             "_base": "HP:18000 Cost:4000 Build:45.0s T6 Cap:P4",
@@ -482,11 +491,12 @@
             "fow_distance": 300,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 4,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:1500  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Pulse Truck": {
             "_base": "HP:9000 Cost:1800 Build:30.0s T7 Cap:P3",
@@ -513,11 +523,12 @@
             "fow_distance": 300,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 3,
+            "_ballistics": "vanilla: dropoff:OFF  drag:0  spd:75  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "_comment_sol_uhf": "========== SOL — Ultra Heavy Factory ==========",
         "Sol Harvester": {
@@ -561,11 +572,12 @@
             "fow_distance": 300,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 6,
+            "_ballistics": "vanilla: dropoff:OFF  drag:0  spd:100  AIlead d/v/g:1/1.5/2.1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "_comment_sol_air": "========== SOL — Air Factory ==========",
         "Gunship": {
@@ -608,11 +620,12 @@
             "fow_distance": 400,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 2,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.215  spd:400  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Dropship": {
             "_base": "HP:8000 Cost:2400 Build:35.0s T0 Cap:P4",
@@ -638,11 +651,12 @@
             "fow_distance": 400,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 4,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.05  spd:500  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Fighter": {
             "_base": "HP:3500 Cost:3000 Build:35.0s T7 Cap:P3",
@@ -681,11 +695,12 @@
             "fow_distance": 400,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 3,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.05  spd:1600  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Bomber": {
             "_base": "HP:15000 Cost:5000 Build:45.0s T8 Cap:P5",
@@ -728,11 +743,12 @@
             "fow_distance": 400,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 5,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:400  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "_comment_struct": "========== SOL/CENTAURI — Structures ==========",
         "Sol Headquarters": {
@@ -876,11 +892,12 @@
             "fow_distance": 300,
             "target_distance": 400,
             "unit_cap_value": 0,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.215  spd:350  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Heavy Turret": {
             "_base": "HP:7000 Cost:1500 Build:35.0s T4",
@@ -902,11 +919,12 @@
             "fow_distance": 300,
             "target_distance": 600,
             "unit_cap_value": 0,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:200  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Anti-Air Rocket Turret": {
             "_base": "HP:5000 Cost:2000 Build:35.0s T6",
@@ -932,11 +950,12 @@
             "fow_distance": 300,
             "target_distance": 600,
             "unit_cap_value": 0,
+            "_ballistics": "vanilla: dropoff:OFF  drag:0.3  spd:150  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "_comment_cen_barracks": "========== CENTAURI — Barracks ==========",
         "Militia": {
@@ -961,9 +980,9 @@
             "unit_cap_value": 1,
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Trooper": {
             "_base": "HP:150 Cost:40 Build:10.0s T0 Cap:S1",
@@ -987,9 +1006,9 @@
             "unit_cap_value": 1,
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Marksman": {
             "_base": "HP:100 Cost:120 Build:10.0s T2 Cap:S2",
@@ -1013,9 +1032,9 @@
             "unit_cap_value": 2,
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Juggernaut": {
             "_base": "HP:200 Cost:180 Build:15.0s T3 Cap:S2",
@@ -1038,11 +1057,12 @@
             "run_speed_mult": 1.0,
             "sprint_speed_mult": 1.0,
             "unit_cap_value": 2,
+            "_ballistics": "vanilla: dropoff:OFF  drag:0.3  spd:200  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Templar": {
             "_base": "HP:200 Cost:360 Build:20.0s T4 Cap:S2",
@@ -1066,9 +1086,9 @@
             "unit_cap_value": 2,
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "_comment_cen_lf": "========== CENTAURI — Light Factory ==========",
         "Light Raider": {
@@ -1093,11 +1113,12 @@
             "fow_distance": 200,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 1,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.215  spd:400  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Squad Transport": {
             "_base": "HP:6000 Cost:300 Build:20.0s T0 Cap:P2",
@@ -1121,11 +1142,12 @@
             "fow_distance": 200,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 2,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.215  spd:400  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Heavy Raider": {
             "_base": "HP:5000 Cost:500 Build:15.0s T2 Cap:P2",
@@ -1149,11 +1171,12 @@
             "fow_distance": 200,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 2,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.215  spd:550  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Assault Car": {
             "_base": "HP:5000 Cost:800 Build:20.0s T3 Cap:P2",
@@ -1191,11 +1214,12 @@
             "fow_distance": 200,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 2,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:500  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Strike Tank": {
             "_base": "HP:8000 Cost:800 Build:20.0s T3 Cap:P3",
@@ -1223,11 +1247,12 @@
             "fow_distance": 200,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 3,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:300  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Flak Car": {
             "_base": "HP:5000 Cost:1100 Build:20.0s T5 Cap:P3",
@@ -1254,11 +1279,12 @@
             "fow_distance": 300,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 3,
+            "_ballistics": "vanilla: dropoff:OFF  drag:0.3  spd:150  AIlead d/v/g:2/1/2.4",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "_comment_cen_hf": "========== CENTAURI — Heavy Factory ==========",
         "Combat Tank": {
@@ -1296,11 +1322,12 @@
             "fow_distance": 200,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 3,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:350  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Rocket Tank": {
             "_base": "HP:11000 Cost:3000 Build:30.0s T5 Cap:P4",
@@ -1327,11 +1354,12 @@
             "fow_distance": 300,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 4,
+            "_ballistics": "vanilla: dropoff:OFF  drag:0.3  spd:100  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Heavy Tank": {
             "_base": "HP:18000 Cost:4000 Build:45.0s T6 Cap:P4",
@@ -1372,11 +1400,12 @@
             "fow_distance": 300,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 4,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:300  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Pyro Tank": {
             "_base": "HP:11000 Cost:1800 Build:30.0s T7 Cap:P3",
@@ -1403,11 +1432,12 @@
             "fow_distance": 300,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 3,
+            "_ballistics": "vanilla: dropoff:OFF  drag:1  spd:70  AIlead d/v/g:1.3/1.3/1.3",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "_comment_cen_uhf": "========== CENTAURI — Ultra Heavy Factory ==========",
         "Cent Harvester": {
@@ -1450,11 +1480,12 @@
             "fow_distance": 300,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 6,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:250  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "_comment_cen_air": "========== CENTAURI — Air Factory ==========",
         "Shuttle": {
@@ -1486,11 +1517,12 @@
             "fow_distance": 400,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 4,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:500  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Dreadnought": {
             "_base": "HP:10000 Cost:3500 Build:35.0s T0 Cap:P3",
@@ -1535,11 +1567,12 @@
             "fow_distance": 400,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 3,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:500  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Interceptor": {
             "_base": "HP:2500 Cost:3000 Build:30.0s T7 Cap:P2",
@@ -1582,11 +1615,12 @@
             "fow_distance": 400,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 2,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:350  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Freighter": {
             "_base": "HP:15000 Cost:5000 Build:45.0s T8 Cap:P5",
@@ -1630,11 +1664,12 @@
             "fow_distance": 400,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 5,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:100  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "_comment_htp": "========== HTP — Hover Bike ==========",
         "Hover Bike": {
@@ -1695,11 +1730,12 @@
             "fow_distance": 200,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 1,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:200  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Shocker": {
             "_base": "HP:400 Cost:220 Build:20.0s T1 Cap:S2",
@@ -1728,11 +1764,12 @@
             "fow_distance": 200,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 2,
+            "_ballistics": "vanilla: dropoff:OFF  drag:0.4  spd:800  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Wasp": {
             "_base": "HP:300 Cost:200 Build:20.0s T4 Cap:S1",
@@ -1781,11 +1818,12 @@
             "fow_distance": 400,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 2,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.4  spd:400  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Squid": {
             "_base": "HP:300 Cost:120 Build:10.0s T6 Cap:S1",
@@ -1873,11 +1911,12 @@
             "fow_distance": 300,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 2,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:400  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Scorpion": {
             "_base": "HP:9000 Cost:1600 Build:45.0s T5 Cap:P3",
@@ -1905,11 +1944,12 @@
             "fow_distance": 300,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 3,
+            "_ballistics": "vanilla: dropoff:OFF  drag:1.25  spd:240  AIlead d/v/g:2/1.7/2.2",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Firebug": {
             "_base": "HP:5000 Cost:2400 Build:45.0s T6 Cap:P3",
@@ -1937,11 +1977,12 @@
             "fow_distance": 400,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 3,
+            "_ballistics": "vanilla: dropoff:OFF  drag:0.3  spd:60  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "_comment_alien_grand": "========== ALIEN — Grand Spawning Cyst ==========",
         "Goliath": {
@@ -1992,11 +2033,12 @@
             "fow_distance": 400,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 8,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:80  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Colossus": {
             "_base": "HP:100000 Cost:6000 Build:120.0s T8 Cap:P15",
@@ -2025,11 +2067,12 @@
             "fow_distance": 400,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 15,
+            "_ballistics": "vanilla: dropoff:OFF  drag:0  spd:500  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "_comment_alien_nest": "========== ALIEN — Nest ==========",
         "Queen": {
@@ -2058,11 +2101,12 @@
             "fow_distance": 300,
             "visible_event_radius_mult": 1.0,
             "unit_cap_value": 0,
+            "_ballistics": "vanilla: dropoff:OFF  drag:0.3  spd:90  AIlead d/v/g:1.2/1/1.1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "_comment_alien_struct": "========== ALIEN — Structures ==========",
         "Nest": {
@@ -2174,11 +2218,12 @@
             "fow_distance": 200,
             "target_distance": 450,
             "unit_cap_value": 0,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:80  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         },
         "Thorn Spire": {
             "_base": "HP:3000 Cost:1000 Build:35.0s T2",
@@ -2200,11 +2245,12 @@
             "fow_distance": 200,
             "target_distance": 650,
             "unit_cap_value": 0,
+            "_ballistics": "vanilla: dropoff:ON  drag:0.3  spd:250  AIlead d/v/g:1/1/1",
             "impact_scale_by_speed": "default",
             "drag_mult": 1.0,
-            "ai_lead_drag": -1,
-            "ai_lead_velocity": -1,
-            "ai_lead_gravity": -1
+            "ai_lead_drag": 1.0,
+            "ai_lead_velocity": 1.0,
+            "ai_lead_gravity": 1.0
         }
     }
 }

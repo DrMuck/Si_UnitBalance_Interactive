@@ -9,15 +9,26 @@ PORT = 8080
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-handler = http.server.SimpleHTTPRequestHandler
-handler.extensions_map.update({
+class Handler(http.server.SimpleHTTPRequestHandler):
+    # Chrome opens several parallel keep-alive connections; a single-threaded
+    # server serialises them and the config fetch can stall, leaving the editor
+    # blank. Disable keep-alive and serve on threads so every request is prompt.
+    protocol_version = 'HTTP/1.0'
+
+    def end_headers(self):
+        # Local dev: never cache, so JS/JSON edits show up on a plain refresh.
+        self.send_header('Cache-Control', 'no-store')
+        super().end_headers()
+
+
+Handler.extensions_map.update({
     '.js': 'application/javascript',
     '.json': 'application/json',
     '.png': 'image/png',
     '.css': 'text/css',
 })
 
-server = http.server.HTTPServer(('localhost', PORT), handler)
+server = http.server.ThreadingHTTPServer(('localhost', PORT), Handler)
 print(f"Serving Si_UnitBalance Interactive at http://localhost:{PORT}")
 print("Press Ctrl+C to stop")
 
