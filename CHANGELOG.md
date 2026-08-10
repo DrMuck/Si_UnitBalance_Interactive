@@ -1,5 +1,22 @@
 # Si_UnitBalance Interactive - Changelog
 
+## 2026-08-10 - Ballistics Group (drop-off, drag, AI aim-lead, turret pitch)
+
+New **Ballistics** group in the parameter editor, matching Si_UnitBalance v7.2.0.
+
+- **Added**: `impact_scale_by_speed` — damage drop-off toggle (on = impact damage scales
+  with the drag-reduced speed, off = flat damage at any range)
+- **Added**: `drag_mult` — scales projectile air drag (`m_fDragCoefficient`)
+- **Added**: `ai_lead_velocity` / `ai_lead_gravity` / `ai_lead_drag` — multipliers on the
+  AI aim-lead factors, layered on top of the automatic projectile-speed compensation
+- **Added**: `pitch_max_up` / `pitch_max_down` — absolute turret elevation/depression in
+  degrees (`VehicleTurret.PitchMax{Up,Down}`), -1 = vanilla
+- **Added**: `aim_compensation` — forces the turret's `ETurretAimCompensation` mode via a
+  new `enum` field type (dropdown). Experimental: takes effect for AI turrets; a
+  server-side override may not move a player's reticle
+- Default config regenerated from the mod dump — adds the three turret fields for 30 units
+- Synced from mother project Si_UnitBalanceUI
+
 ## 2026-03-06 - Structure FOW Vision & Turret Target Range
 
 - **Added**: `fow_distance` for all buildings — adjustable Fog of War reveal range

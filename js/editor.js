@@ -188,6 +188,25 @@ const Editor = (() => {
             });
 
             row.appendChild(select);
+        } else if (meta && meta.type === 'enum') {
+            // Fixed option list (value + label). Stored as the numeric value.
+            const select = document.createElement('select');
+            select.className = 'param-select';
+            for (const opt of (meta.options || [])) {
+                const o = document.createElement('option');
+                o.value = opt.v;
+                o.textContent = opt.t;
+                select.appendChild(o);
+            }
+            select.value = (value === undefined || value === null) ? '-1' : String(value);
+
+            select.addEventListener('change', () => {
+                State.setUnitParam(unitName, paramKey, parseInt(select.value));
+                updateRowModified(row, unitName, paramKey);
+                Tree.refreshBadges();
+            });
+
+            row.appendChild(select);
         } else if (meta && meta.type === 'float') {
             const numInput = document.createElement('input');
             numInput.type = 'number';

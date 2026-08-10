@@ -40,6 +40,15 @@ const Schema = (() => {
         ai_lead_gravity:            { label: 'AI Lead: Gravity',   group: 'Ballistics',       type: 'multiplier', min: 0.1, max: 5.0, step: 0.05, tooltip: 'Multiplier on the AI aim-lead gravity factor. Raise for high-arc shells that land short.' },
         ai_lead_drag:               { label: 'AI Lead: Drag',      group: 'Ballistics',       type: 'multiplier', min: 0.1, max: 5.0, step: 0.05, tooltip: 'Multiplier on the AI aim-lead drag factor. Raise if AI under-leads a draggy (decelerating) projectile like the Crimson Tank shell.' },
 
+        // Turret aiming (VehicleTurret) — absolute degrees; -1 = leave vanilla.
+        // NOTE: these are turret component fields, applied via direct write. They take
+        // effect for AI-controlled turrets on the server; player-controlled aim is
+        // computed client-side, so a server-side override may not move the player reticle
+        // (same caveat as aim_compensation — see CHANGELOG).
+        pitch_max_up:               { label: 'Pitch Max Up (°)',   group: 'Ballistics',       type: 'float', min: -1, max: 90, step: 1, tooltip: 'Maximum turret elevation in degrees (VehicleTurret.PitchMaxUp). Raise to let a tank aim higher up-slope. -1 = vanilla. Example: Heavy Tank vanilla = 20°.' },
+        pitch_max_down:             { label: 'Pitch Max Down (°)', group: 'Ballistics',       type: 'float', min: -1, max: 90, step: 1, tooltip: 'Maximum turret depression in degrees (VehicleTurret.PitchMaxDown). Raise to let a tank aim further down-slope. -1 = vanilla. Example: Heavy Tank vanilla = 6°.' },
+        aim_compensation:           { label: 'Aim Compensation',   group: 'Ballistics',       type: 'enum', options: [ {v:-1,t:'Default (vanilla)'}, {v:0,t:'0 — None'}, {v:1,t:'1 — Primary (vertical)'}, {v:2,t:'2 — Secondary (vertical)'}, {v:3,t:'3 — Primary (full)'}, {v:4,t:'4 — Secondary (full)'} ], tooltip: 'Forces the turret ballistic-drop aim compensation mode (ETurretAimCompensation). EXPERIMENTAL — works for the AI reticle but may not move a player reticle from a server override (see CHANGELOG known issue).' },
+
         // Primary weapon
         pri_damage_mult:            { label: 'Damage',             group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales primary weapon damage (melee)' },
         pri_impact_damage_mult:     { label: 'Impact Damage',      group: 'Primary Weapon',   type: 'multiplier', min: 0.1, max: 10.0, step: 0.01, tooltip: 'Scales primary impact damage' },
