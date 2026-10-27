@@ -153,7 +153,7 @@ const Schema = (() => {
                 'Scout', 'Rifleman', 'Sniper', 'Heavy', 'Commando',
                 'Light Quad', 'Platoon Hauler', 'Heavy Quad',
                 'Light Striker', 'Heavy Striker', 'AA Truck',
-                'Hover Tank', 'Barrage Truck', 'Railgun Tank', 'Pulse Truck',
+                'Hover Tank', 'Barrage Truck', 'Railgun Tank', 'Pulse Truck', 'Repair Rig',
                 'Sol Harvester', 'Siege Tank',
                 'Gunship', 'Dropship', 'Fighter', 'Bomber',
             ]
@@ -165,7 +165,7 @@ const Schema = (() => {
                 'Militia', 'Trooper', 'Marksman', 'Juggernaut', 'Templar',
                 'Light Raider', 'Squad Transport', 'Heavy Raider',
                 'Assault Car', 'Strike Tank', 'Flak Car',
-                'Combat Tank', 'Rocket Tank', 'Heavy Tank', 'Pyro Tank',
+                'Combat Tank', 'Rocket Tank', 'Heavy Tank', 'Pyro Tank', 'Repair Truck',
                 'Cent Harvester', 'Crimson Tank',
                 'Shuttle', 'Dreadnought', 'Interceptor', 'Freighter',
             ]
